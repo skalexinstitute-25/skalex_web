@@ -668,7 +668,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/new_banner-bg.jpg);
+  background-image: url(../images/banner_new1.jpeg);
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1165,6 +1165,23 @@ Team Style
   left: 50%;
   transform: translateX(-110px);
   transition: all .3s;
+}
+
+/* Spacing helper for the lower team row (replaces inline style) */
+.team-row--bottom {
+  margin-top: 160px;
+}
+
+@media (max-width: 1200px) {
+  .team-row--bottom { margin-top: 120px; }
+}
+
+@media (max-width: 992px) {
+  .team-row--bottom { margin-top: 80px; }
+}
+
+@media (max-width: 767px) {
+  .team-row--bottom { margin-top: 40px; }
 }
 
 .team-member .main-content {
