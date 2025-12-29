@@ -1,0 +1,738 @@
+/* ========================================
+   Enhanced Responsive Styles for Skalex
+   ======================================== */
+
+/* === Base Improvements === */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Container Improvements === */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* === Enhanced Header Responsiveness === */
+@media (max-width: 991px) {
+  .header-area .main-nav .logo {
+    padding-left: 0 !important;
+  }
+  
+  .header-area .main-nav .logo img {
+    height: 50px !important;
+    width: auto !important;
+    padding-left: 15px !important;
+    max-width: 150px;
+  }
+  
+  .header-area .main-nav .menu-trigger {
+    position: absolute;
+    right: 20px;
+    top: 23px;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-area .main-nav .logo img {
+    height: 40px !important;
+    padding-left: 10px !important;
+  }
+}
+
+/* === Banner Improvements === */
+@media (max-width: 1199px) {
+  .main-banner .item h2 {
+    font-size: 32px !important;
+    line-height: 42px !important;
+  }
+  
+  .main-banner .item p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-banner .item {
+    padding: 60px 20px 100px 20px !important;
+  }
+  
+  .main-banner .item h2 {
+    font-size: 24px !important;
+    line-height: 34px !important;
+    margin-bottom: 15px;
+  }
+  
+  .main-banner .item .category {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .main-banner .item p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+  
+  .main-banner .item .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-banner .item .buttons .main-button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .main-banner .item .buttons .main-button a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .main-banner .owl-nav {
+    left: 20px !important;
+    bottom: 40px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .main-banner .item h2 {
+    font-size: 20px !important;
+    line-height: 30px !important;
+  }
+  
+  .main-banner .item p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+/* === Services Section === */
+@media (max-width: 991px) {
+  .services .service-item {
+    margin-bottom: 30px;
+  }
+  
+  .services .row > [class*='col-'] {
+    margin-bottom: 30px;
+  }
+  
+  .services .row > [class*='col-']:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .services {
+    padding: 60px 0 !important;
+  }
+  
+  .services .section-heading h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  .services .section-heading h6 {
+    font-size: 14px;
+  }
+  
+  .services .service-item {
+    padding: 30px 20px;
+  }
+  
+  .services .service-item .icon {
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 100px !important;
+    margin-bottom: 20px;
+  }
+  
+  .services .service-item .icon img {
+    max-width: 60px;
+  }
+  
+  .services .service-item h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .services .service-item p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/* === About Us Section === */
+@media (max-width: 991px) {
+  .about-us .accordion {
+    margin-bottom: 40px;
+  }
+  
+  .about-us .col-lg-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us {
+    padding: 60px 0 !important;
+  }
+  
+  .about-us .accordion-button {
+    font-size: 15px;
+    padding: 15px 20px;
+  }
+  
+  .about-us .accordion-body {
+    font-size: 14px;
+    padding: 20px;
+  }
+  
+  .about-us .right-image img {
+    margin-top: 30px;
+  }
+}
+
+/* === Courses Section === */
+@media (max-width: 991px) {
+  .courses .item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .courses {
+    padding: 60px 0 !important;
+  }
+  
+  .courses .section-heading h2 {
+    font-size: 28px;
+  }
+  
+  .courses .item {
+    padding: 20px;
+  }
+  
+  .courses .item img {
+    margin-bottom: 20px;
+  }
+  
+  .courses .item h4 {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+}
+
+/* === Team Section === */
+@media (max-width: 991px) {
+  .team .team-member {
+    margin-bottom: 60px;
+  }
+  
+  .team .team-row--bottom {
+    justify-content: center;
+  }
+  
+  .team .team-row--bottom .col-lg-3 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team {
+    padding: 60px 0 20px 0 !important;
+    overflow: visible !important;
+  }
+  
+  .team .section-heading h2 {
+    font-size: 28px;
+  }
+  
+  .team .container {
+    overflow: visible !important;
+  }
+  
+  .team .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    display: block !important;
+  }
+  
+  .team .row.justify-content-center {
+    display: block !important;
+  }
+  
+  .team [class*="col-"] {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    position: relative !important;
+    float: none !important;
+    display: block !important;
+  }
+  
+  .team .team-member {
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  
+  .team .row > div:last-child .team-member {
+    margin-bottom: 0 !important;
+  }
+  
+  .team .team-member img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block;
+    position: relative !important;
+    top: 0 !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+  }
+  
+  .team .team-member .main-content {
+    padding: 0 !important;
+    padding-top: 0 !important;
+    text-align: center;
+    position: relative !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+  
+  .team .team-member h4 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .team .team-member .category {
+    font-size: 13px;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .team .team-member .social-icons {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .team .team-member {
+    margin-bottom: 30px !important;
+  }
+}
+
+/* === Contact Section === */
+@media (max-width: 991px) {
+  .contact-us .section-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-us {
+    padding: 60px 0 40px 0 !important;
+  }
+  
+  .contact-us .section-heading h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  .contact-us .section-heading h6 {
+    font-size: 14px;
+  }
+  
+  .contact-us .section-heading p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .contact-us .special-offer {
+    padding: 25px 20px 25px 80px !important;
+    margin: 30px 0 !important;
+  }
+  
+  .contact-us .special-offer .offer {
+    width: 60px !important;
+    height: 60px !important;
+    line-height: 20px !important;
+    font-size: 18px !important;
+    left: 10px !important;
+  }
+  
+  .contact-us .special-offer h6 {
+    font-size: 13px;
+  }
+  
+  .contact-us .special-offer h4 {
+    font-size: 15px !important;
+  }
+  
+  .contact-us .contact-us-content {
+    padding: 25px 20px !important;
+  }
+  
+  .contact-us input,
+  .contact-us textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .contact-us textarea {
+    min-height: 120px;
+  }
+  
+  .contact-us .orange-button {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-us .special-offer {
+    padding: 20px 15px 20px 70px !important;
+  }
+  
+  .contact-us .special-offer .offer {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* === Footer === */
+@media (max-width: 767px) {
+  footer {
+    padding: 30px 0 !important;
+  }
+  
+  footer p {
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+/* === Fun Facts Counter === */
+@media (max-width: 767px) {
+  .fun-facts {
+    padding: 60px 0 !important;
+  }
+  
+  .fun-facts .count-area-content {
+    margin-bottom: 30px;
+  }
+  
+  .fun-facts h5 {
+    font-size: 28px !important;
+  }
+  
+  .fun-facts span {
+    font-size: 14px;
+  }
+}
+
+/* === Buttons === */
+@media (max-width: 767px) {
+  .main-button a,
+  .orange-button {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+
+/* === Improved Touch Targets for Mobile === */
+@media (max-width: 767px) {
+  .header-area .main-nav .nav li a {
+    padding: 15px 20px !important;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons li a {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    margin: 0 5px;
+  }
+}
+
+/* === Smooth Section Spacing === */
+@media (max-width: 767px) {
+  section,
+  .section {
+    padding: 60px 0 !important;
+  }
+  
+  .section-heading {
+    margin-bottom: 40px;
+  }
+}
+
+/* === Owl Carousel Responsive Improvements === */
+@media (max-width: 767px) {
+  .owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .owl-carousel .owl-dot {
+    margin: 0 5px;
+  }
+}
+
+/* === Improved Grid Spacing === */
+@media (max-width: 767px) {
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .row > [class*='col-'] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* === Prevent Horizontal Overflow === */
+@media (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* === Landscape Mobile Optimization === */
+@media (max-width: 767px) and (orientation: landscape) {
+  .main-banner .item {
+    padding: 40px 20px 60px 20px !important;
+  }
+  
+  .main-banner .item h2 {
+    font-size: 22px !important;
+    line-height: 32px !important;
+  }
+}
+
+/* === Large Desktop Optimization === */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* === Print Styles === */
+@media print {
+  .header-area,
+  .menu-trigger,
+  .contact-us,
+  footer {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+  }
+}
+
+/* === Additional Mobile Improvements === */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better Image Loading */
+img {
+  display: block;
+}
+
+/* Service Item Hover Effects for Touch */
+@media (max-width: 991px) {
+  .service-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Course Cards Mobile Optimization */
+@media (max-width: 991px) {
+  .events_item {
+    margin-bottom: 30px;
+  }
+  
+  .events_item .thumb img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .events_item h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .event_box .col-lg-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .events_item {
+    margin-bottom: 25px;
+  }
+  
+  .events_item .down-content {
+    padding: 20px;
+  }
+}
+
+/* Fun Facts Mobile Enhancement */
+@media (max-width: 767px) {
+  .fun-facts .wrapper {
+    padding: 30px 15px;
+  }
+  
+  .fun-facts .counter {
+    margin-bottom: 30px;
+  }
+  
+  .fun-facts .counter:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Accordion Mobile Improvements */
+@media (max-width: 767px) {
+  .accordion-item {
+    margin-bottom: 15px;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #f1f0fe;
+  }
+}
+
+/* Better spacing for all sections on tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    padding: 80px 0;
+  }
+  
+  .section-heading {
+    margin-bottom: 50px;
+  }
+}
+
+/* Ensure buttons are fully clickable on mobile */
+@media (max-width: 767px) {
+  .main-button a,
+  .orange-button,
+  button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Better table responsiveness if any tables exist */
+@media (max-width: 767px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Optimize form elements for mobile */
+@media (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    -webkit-appearance: none;
+    border-radius: 5px;
+  }
+}
+
+/* Better mobile navigation accessibility */
+@media (max-width: 767px) {
+  .main-nav .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  .main-nav .nav.active {
+    display: block;
+  }
+}
+
+/* Improve preloader on mobile */
+@media (max-width: 767px) {
+  #js-preloader {
+    background-color: #fff;
+  }
+  
+  .preloader-inner {
+    transform: scale(0.8);
+  }
+}
+
+/* Fix any overflow issues */
+@media (max-width: 991px) {
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  img, video, iframe {
+    max-width: 100%;
+  }
+}
+
