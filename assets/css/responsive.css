@@ -290,6 +290,9 @@ img {
     margin-left: 0 !important;
     margin-right: 0 !important;
     width: 100% !important;
+    max-width: 280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     background: transparent !important;
     border-radius: 0 !important;
     padding: 0 !important;
@@ -307,47 +310,104 @@ img {
   }
   
   .team .team-member img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+    max-width: 160px !important;
+    width: 160px !important;
+    height: 160px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     display: block;
     position: relative !important;
     top: 0 !important;
+    left: auto !important;
+    transform: none !important;
     border-radius: 50% !important;
     object-fit: cover;
   }
   
   .team .team-member .main-content {
-    padding: 0 !important;
-    padding-top: 0 !important;
+    padding: 20px 15px !important;
+    padding-top: 20px !important;
     text-align: center;
     position: relative !important;
     margin: 0 !important;
-    background: transparent !important;
+    margin-top: 15px !important;
+    background: #f1f0fe !important;
+    border-radius: 20px !important;
   }
   
   .team .team-member h4 {
     font-size: 18px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
   
   .team .team-member .category {
     font-size: 13px;
     display: block;
-    margin: 10px 0;
+    margin: 8px 0 12px 0;
   }
   
   .team .team-member .social-icons {
-    margin-top: 15px;
+    margin-top: 12px;
+  }
+  
+  .team .team-member .social-icons li a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 575px) {
   .team .team-member {
     margin-bottom: 30px !important;
+    max-width: 260px !important;
+  }
+  
+  .team .team-member img {
+    max-width: 140px !important;
+    width: 140px !important;
+    height: 140px !important;
+  }
+  
+  .team .team-member .main-content {
+    padding: 18px 12px !important;
+  }
+  
+  .team .team-member h4 {
+    font-size: 17px;
+  }
+  
+  .team .team-member .category {
+    font-size: 12px;
+  }
+  
+  .team .team-member .social-icons li a {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .team .team-member {
+    max-width: 240px !important;
+  }
+  
+  .team .team-member img {
+    max-width: 120px !important;
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  .team .team-member h4 {
+    font-size: 16px;
+  }
+  
+  .team .team-member .category {
+    font-size: 11px;
   }
 }
 
