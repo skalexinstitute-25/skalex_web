@@ -233,7 +233,16 @@ img {
 }
 
 /* === Team Section === */
+/* Desktop spacing fix to prevent heading overlap with images */
+.team .section-heading {
+  margin-bottom: 140px !important;
+}
+
 @media (max-width: 991px) {
+  .team .section-heading {
+    margin-bottom: 100px !important;
+  }
+  
   .team .team-member {
     margin-bottom: 60px;
   }
@@ -251,6 +260,10 @@ img {
   .team {
     padding: 60px 0 20px 0 !important;
     overflow: visible !important;
+  }
+  
+  .team .section-heading {
+    margin-bottom: 40px !important;
   }
   
   .team .section-heading h2 {
@@ -331,7 +344,8 @@ img {
     position: relative !important;
     margin: 0 !important;
     margin-top: 15px !important;
-    background: #f1f0fe !important;
+    background: #ffffff !important;
+    background-image: radial-gradient(circle at top center, rgba(59, 130, 246, 0.15), transparent 70%) !important;
     border-radius: 20px !important;
   }
   
@@ -553,10 +567,16 @@ img {
   section,
   .section {
     padding: 60px 0 !important;
+    margin-top: 0 !important;
   }
   
   .section-heading {
     margin-bottom: 40px;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -706,7 +726,8 @@ img {
   }
   
   .accordion-button:not(.collapsed) {
-    background-color: #f1f0fe;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at top center, rgba(59, 130, 246, 0.15), transparent 70%);
   }
 }
 
