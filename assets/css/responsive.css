@@ -618,12 +618,6 @@ img {
     padding-left: 10px;
     padding-right: 10px;
   }
-  
-  /* Exclude event_box from general column rules */
-  .event_box.row > [class*='col-'] {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-  }
 }
 
 /* === Prevent Horizontal Overflow === */
@@ -712,59 +706,44 @@ img {
 
 /* Tablet view: Keep 2 courses per row (col-md-6) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .event_box .col-md-6 {
+  .courses .event_box .col-md-6 {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
-/* Mobile view: 3 courses per row - Applied for screens up to 767px */
+/* Mobile view: 3 courses per row - Only for courses section */
 @media (max-width: 767px) {
+  /* Reset and override for courses section only */
   .courses .event_box.row {
-    margin-left: -8px !important;
-    margin-right: -8px !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
+    margin-left: -5px !important;
+    margin-right: -5px !important;
   }
   
   .courses .event_box .col-lg-4,
-  .courses .event_box .col-md-6,
-  .courses .event_box [class*="col-lg-4"],
-  .courses .event_box [class*="col-md-6"],
-  .courses .event_box > [class*="col-"] {
+  .courses .event_box .col-md-6 {
     flex: 0 0 33.333333% !important;
     max-width: 33.333333% !important;
-    width: 33.333333% !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-    position: relative !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
   
-  .events_item {
+  .courses .events_item {
     margin-bottom: 25px;
   }
   
-  .events_item .down-content {
+  .courses .events_item .down-content {
     padding: 15px;
   }
   
-  .events_item .thumb img {
+  .courses .events_item .thumb img {
     width: 100%;
     height: auto;
   }
   
-  .events_item h4 {
+  .courses .events_item h4 {
     font-size: 16px;
     line-height: 1.4;
-  }
-}
-
-/* Additional override for very small mobile screens */
-@media (max-width: 575px) {
-  .courses .event_box > [class*="col-"] {
-    flex: 0 0 33.333333% !important;
-    max-width: 33.333333% !important;
-    width: 33.333333% !important;
   }
 }
 
