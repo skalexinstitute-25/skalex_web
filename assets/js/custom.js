@@ -32,28 +32,87 @@
 		}
 	})
 
-	const elem = document.querySelector('.event_box');
-	const filtersElem = document.querySelector('.event_filter');
-	if (elem) {
-		const rdn_events_list = new Isotope(elem, {
-			itemSelector: '.event_outer',
-			layoutMode: 'masonry'
-		});
-		if (filtersElem) {
-			filtersElem.addEventListener('click', function(event) {
-				if (!matchesSelector(event.target, 'a')) {
-					return;
-				}
-				const filterValue = event.target.getAttribute('data-filter');
-				rdn_events_list.arrange({
-					filter: filterValue
-				});
-				filtersElem.querySelector('.is_active').classList.remove('is_active');
-				event.target.classList.add('is_active');
-				event.preventDefault();
+	// Initialize Isotope after images are loaded to prevent layout overlap
+	var rdn_events_list;
+	function initIsotope() {
+		const elem = document.querySelector('.event_box');
+		const filtersElem = document.querySelector('.event_filter');
+		if (elem) {
+			rdn_events_list = new Isotope(elem, {
+				itemSelector: '.event_outer',
+				layoutMode: 'masonry'
 			});
+			
+			// Check and wait for images to load, then refresh layout
+			const images = elem.querySelectorAll('img');
+			let loadedCount = 0;
+			const totalImages = images.length;
+			
+			if (totalImages > 0) {
+				images.forEach(function(img) {
+					if (img.complete && img.naturalHeight !== 0) {
+						loadedCount++;
+					} else {
+						img.addEventListener('load', function() {
+							loadedCount++;
+							if (loadedCount === totalImages && rdn_events_list) {
+								rdn_events_list.layout();
+							}
+						}, { once: true });
+						img.addEventListener('error', function() {
+							loadedCount++;
+							if (loadedCount === totalImages && rdn_events_list) {
+								rdn_events_list.layout();
+							}
+						}, { once: true });
+					}
+				});
+				
+				// If all images are already loaded
+				if (loadedCount === totalImages) {
+					setTimeout(function() {
+						if (rdn_events_list) {
+							rdn_events_list.layout();
+						}
+					}, 150);
+				}
+			} else {
+				// No images found, just layout
+				setTimeout(function() {
+					if (rdn_events_list) {
+						rdn_events_list.layout();
+					}
+				}, 150);
+			}
+			
+			if (filtersElem && rdn_events_list) {
+				filtersElem.addEventListener('click', function(event) {
+					// Check if clicked element is an anchor tag
+					if (event.target.tagName !== 'A') {
+						return;
+					}
+					const filterValue = event.target.getAttribute('data-filter');
+					if (!filterValue) {
+						return;
+					}
+					rdn_events_list.arrange({
+						filter: filterValue
+					});
+					const activeItem = filtersElem.querySelector('.is_active');
+					if (activeItem) {
+						activeItem.classList.remove('is_active');
+					}
+					event.target.classList.add('is_active');
+					event.preventDefault();
+				});
+			}
 		}
 	}
+
+	// Wait for window load to ensure all images are loaded before initializing Isotope
+	$(window).on('load', function() {
+		setTimeout(initIsotope, 200);
+	});
 
 	// Initialize Owl Carousel after DOM is ready
 	$(document).ready(function() {

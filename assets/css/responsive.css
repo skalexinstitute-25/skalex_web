@@ -289,12 +289,13 @@ img {
     width: 100% !important;
     flex: 0 0 100% !important;
     max-width: 100% !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 30px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
     position: relative !important;
     float: none !important;
     display: block !important;
+    min-height: 1px !important;
   }
   
   .team .team-member {
@@ -319,6 +320,10 @@ img {
   }
   
   .team .row > div:last-child .team-member {
+    margin-bottom: 40px !important;
+  }
+  
+  .team .team-row--bottom .team-member:last-child {
     margin-bottom: 0 !important;
   }
   
@@ -347,22 +352,30 @@ img {
     background: #ffffff !important;
     background-image: radial-gradient(circle at top center, rgba(59, 130, 246, 0.15), transparent 70%) !important;
     border-radius: 20px !important;
+    min-height: 150px !important;
+    display: block !important;
+    visibility: visible !important;
   }
   
   .team .team-member h4 {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 8px;
+    display: block !important;
+    visibility: visible !important;
   }
   
   .team .team-member .category {
     font-size: 13px;
-    display: block;
+    display: block !important;
     margin: 8px 0 12px 0;
+    visibility: visible !important;
   }
   
   .team .team-member .social-icons {
     margin-top: 12px;
+    display: block !important;
+    visibility: visible !important;
   }
   
   .team .team-member .social-icons li a {
@@ -370,6 +383,8 @@ img {
     height: 36px;
     line-height: 36px;
     font-size: 16px;
+    display: inline-block !important;
+    visibility: visible !important;
   }
 }
 
@@ -772,6 +787,7 @@ img {
   select {
     font-size: 16px !important; /* Prevents zoom on iOS */
     -webkit-appearance: none;
+    appearance: none;
     border-radius: 5px;
   }
 }

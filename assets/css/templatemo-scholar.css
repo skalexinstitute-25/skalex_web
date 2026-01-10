@@ -1078,10 +1078,14 @@ Courses Style
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  min-height: 200px;
 }
 
 .events_item .thumb img {
   margin-bottom: -5px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .events_item .thumb span.category {
