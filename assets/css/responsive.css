@@ -249,15 +249,16 @@ img {
     display: block !important;
   }
   
-  /* Perfect SQUARE shape for course images */
+  /* Properly sized image container with good aspect ratio */
   .courses .events_item .thumb {
     position: relative !important;
     width: 100% !important;
     height: 0 !important;
-    padding-top: 100% !important; /* This creates perfect 1:1 square ratio */
+    padding-top: 65% !important; /* 16:10 aspect ratio - not too tall, better fit */
     overflow: hidden !important;
     border-radius: 25px !important;
     min-height: 0 !important;
+    max-height: 300px !important; /* Limit maximum height */
   }
   
   .courses .events_item .thumb a {
@@ -274,7 +275,7 @@ img {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Cover the entire square */
+    object-fit: cover !important;
     object-position: center !important;
     margin: 0 !important;
   }
@@ -320,6 +321,8 @@ img {
   
   .courses .events_item .thumb {
     border-radius: 20px !important;
+    padding-top: 60% !important; /* Slightly shorter on small phones */
+    max-height: 250px !important;
   }
   
   .courses .events_item .thumb span.category {
