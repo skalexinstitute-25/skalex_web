@@ -704,10 +704,27 @@ img {
   }
 }
 
+/* Tablet view: Keep 2 courses per row (col-md-6) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .event_box .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Mobile view: 3 courses per row */
 @media (max-width: 767px) {
-  .event_box .col-lg-4 {
-    padding-left: 15px;
-    padding-right: 15px;
+  .event_box {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  
+  .event_box .col-lg-4,
+  .event_box .col-md-6 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   
   .events_item {
@@ -715,7 +732,17 @@ img {
   }
   
   .events_item .down-content {
-    padding: 20px;
+    padding: 15px;
+  }
+  
+  .events_item .thumb img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .events_item h4 {
+    font-size: 16px;
+    line-height: 1.4;
   }
 }
 
