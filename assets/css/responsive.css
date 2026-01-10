@@ -618,6 +618,12 @@ img {
     padding-left: 10px;
     padding-right: 10px;
   }
+  
+  /* Exclude event_box from general column rules */
+  .event_box.row > [class*='col-'] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
 }
 
 /* === Prevent Horizontal Overflow === */
@@ -712,19 +718,26 @@ img {
   }
 }
 
-/* Mobile view: 3 courses per row */
+/* Mobile view: 3 courses per row - Applied for screens up to 767px */
 @media (max-width: 767px) {
-  .event_box {
-    margin-left: -8px;
-    margin-right: -8px;
+  .courses .event_box.row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
   }
   
-  .event_box .col-lg-4,
-  .event_box .col-md-6 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    padding-left: 8px;
-    padding-right: 8px;
+  .courses .event_box .col-lg-4,
+  .courses .event_box .col-md-6,
+  .courses .event_box [class*="col-lg-4"],
+  .courses .event_box [class*="col-md-6"],
+  .courses .event_box > [class*="col-"] {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    position: relative !important;
   }
   
   .events_item {
@@ -743,6 +756,15 @@ img {
   .events_item h4 {
     font-size: 16px;
     line-height: 1.4;
+  }
+}
+
+/* Additional override for very small mobile screens */
+@media (max-width: 575px) {
+  .courses .event_box > [class*="col-"] {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
   }
 }
 
