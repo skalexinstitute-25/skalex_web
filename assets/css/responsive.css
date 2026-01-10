@@ -207,97 +207,138 @@ img {
   .courses .item {
     margin-bottom: 30px;
   }
+  
+  /* Force 2 columns on tablets */
+  .courses .event_box > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
 }
 
+/* Mobile devices - ONE course per row with square shape */
 @media (max-width: 767px) {
   .courses {
-    padding: 60px 0 !important;
+    padding: 60px 0 30px 0 !important;
   }
   
   .courses .section-heading h2 {
     font-size: 28px;
+    margin-bottom: 40px;
   }
   
-  /* Make courses full width on mobile - one per row */
-  .courses .event_box .col-lg-4,
-  .courses .event_box .col-md-6 {
+  /* FORCE one course per row on mobile */
+  .courses .event_box {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .courses .event_box > div[class*="col-"] {
     flex: 0 0 100% !important;
     max-width: 100% !important;
+    width: 100% !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
+    margin-bottom: 20px !important;
   }
   
   .courses .events_item {
+    width: 100% !important;
     max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-bottom: 25px !important;
+    margin: 0 auto 0 auto !important;
+    display: block !important;
   }
   
-  /* Make course image container square */
+  /* Perfect SQUARE shape for course images */
   .courses .events_item .thumb {
-    position: relative;
-    width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio - creates square */
-    overflow: hidden;
-    border-radius: 25px;
-    min-height: unset !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 0 !important;
+    padding-top: 100% !important; /* This creates perfect 1:1 square ratio */
+    overflow: hidden !important;
+    border-radius: 25px !important;
+    min-height: 0 !important;
+  }
+  
+  .courses .events_item .thumb a {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
   
   .courses .events_item .thumb img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills the square without distortion */
-    object-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Cover the entire square */
+    object-position: center !important;
+    margin: 0 !important;
   }
   
   .courses .events_item .thumb span.category {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 13px;
-    padding: 6px 15px;
+    position: absolute !important;
+    left: 20px !important;
+    top: 20px !important;
+    font-size: 13px !important;
+    padding: 6px 15px !important;
+    z-index: 2 !important;
   }
   
   .courses .events_item .down-content {
-    padding: 20px 20px 25px 20px;
+    padding: 20px 20px 25px 20px !important;
   }
   
   .courses .events_item .down-content h4 {
-    font-size: 18px;
+    font-size: 19px !important;
+    margin-bottom: 8px !important;
   }
   
   .courses .events_item .down-content span.author {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 
-/* Extra small devices */
+/* Extra small devices (phones under 576px) */
 @media (max-width: 575px) {
+  .courses {
+    padding: 50px 0 20px 0 !important;
+  }
+  
+  .courses .section-heading h2 {
+    font-size: 26px !important;
+  }
+  
+  .courses .event_box > div[class*="col-"] {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-bottom: 18px !important;
+  }
+  
   .courses .events_item .thumb {
-    border-radius: 20px;
+    border-radius: 20px !important;
   }
   
   .courses .events_item .thumb span.category {
-    font-size: 12px;
-    padding: 5px 12px;
-    left: 15px;
-    top: 15px;
+    font-size: 12px !important;
+    padding: 5px 12px !important;
+    left: 15px !important;
+    top: 15px !important;
   }
   
   .courses .events_item .down-content {
-    padding: 18px 18px 22px 18px;
+    padding: 18px 18px 22px 18px !important;
   }
   
   .courses .events_item .down-content h4 {
-    font-size: 17px;
+    font-size: 17px !important;
   }
   
   .courses .events_item .down-content span.author {
-    font-size: 13px;
+    font-size: 13px !important;
   }
 }
 
