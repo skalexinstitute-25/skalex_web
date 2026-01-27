@@ -22,12 +22,14 @@ img {
 @media (max-width: 991px) {
   .header-area .main-nav .logo {
     padding-left: 0 !important;
+    padding-bottom: 5px !important;
   }
   
   .header-area .main-nav .logo img {
     height: 50px !important;
     width: auto !important;
     padding-left: 15px !important;
+    padding-bottom: 5px !important;
     max-width: 150px;
   }
   
@@ -35,6 +37,7 @@ img {
     position: absolute;
     right: 20px;
     top: 23px;
+    padding-bottom: 5px !important;
   }
 }
 
@@ -42,6 +45,11 @@ img {
   .header-area .main-nav .logo img {
     height: 40px !important;
     padding-left: 10px !important;
+    padding-bottom: 5px !important;
+  }
+  
+  .header-area .main-nav .menu-trigger {
+    padding-bottom: 5px !important;
   }
 }
 
