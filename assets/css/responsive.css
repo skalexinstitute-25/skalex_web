@@ -67,6 +67,10 @@ img {
 }
 
 @media (max-width: 767px) {
+  .main-banner {
+    padding-top: 100px !important;
+  }
+  
   .main-banner .item {
     padding: 60px 20px 100px 20px !important;
   }
