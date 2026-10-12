@@ -25,21 +25,73 @@ header nav a:hover{color:#142249}
   section > svg[aria-hidden]:first-child{display:none}
   header nav a{padding:10px 8px !important;font-size:15px}
 }
+
+/* ---------- header / menu ---------- */
+.navbtn{display:none;align-items:center;justify-content:center;width:46px;height:46px;border-radius:10px;border:1.5px solid #C9D6EE;background:#fff;color:#142249;cursor:pointer}
+.wa-float{display:none}
+@media (max-width:760px){
+  .hdr{flex-wrap:wrap !important;padding:10px 20px !important}
+  .hdr img{width:110px !important;height:46px !important}
+  .navbtn{display:flex}
+  .mainnav{display:none !important;width:100%;flex-direction:column !important;align-items:stretch !important;gap:2px !important;padding:8px 0 6px;border-top:1px solid #E1E7F0}
+  .mainnav.open{display:flex !important}
+  .mainnav a{padding:14px 6px !important;border-bottom:none !important;font-size:16px !important}
+  .mainnav a[aria-current="page"]{color:#16867F !important}
+  .mainnav .nav-ig{text-decoration:none;width:auto !important;height:auto !important;justify-content:flex-start !important;gap:10px}
+  .mainnav .nav-ig::after{content:"Instagram";font-weight:500}
+  .mainnav .nav-wa{margin:8px 0 0 !important;text-align:center;padding:14px !important}
+  .wa-float{display:flex;position:fixed;right:16px;bottom:16px;z-index:50;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+}
+/* ---------- spacing & layout ---------- */
+@media (max-width:640px){
+  section > svg[aria-hidden]:first-child{display:none}
+  .hero-art{display:none !important}
+  [style*="padding: 88px 24px"]{padding:52px 20px !important}
+  [style*="padding: 72px 24px 72px"]{padding:40px 20px 48px !important}
+  [style*="padding: 64px 24px"]{padding:40px 20px 44px !important}
+  [style*="padding: 24px 24px 88px"]{padding:8px 20px 52px !important}
+  [style*="padding: 0 24px 88px"]{padding:0 20px 52px !important}
+  [style*="padding: 0 24px 72px"]{padding:0 20px 44px !important}
+  [style*="padding: 0 24px 40px"]{padding:0 20px 28px !important}
+  [style*="padding: 56px 48px"]{padding:32px 24px !important}
+  [style*="padding: 32px;"]{padding:24px !important}
+  [style*="padding: 28px;"]{padding:20px !important}
+  [style*="gap: 32px"]{gap:22px !important}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:10px !important}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:16px !important;padding:20px !important}
+  .ig-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+  .ig-grid a{border-radius:12px !important}
+  .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+  .tool-grid > div{padding:16px !important}
+  .tool-grid p{display:none}
+  .tool-grid h3{font-size:.95rem !important}
+  .foot{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:24px !important;padding:36px 20px 88px !important}
+  .foot > div:first-child{grid-column:1 / -1}
+  h1{letter-spacing:-0.02em !important}
+  .btns a{flex:1 1 100%;text-align:center}
+}
+/* ---------- FAQ accordion ---------- */
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700;font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;font-weight:500;color:#16867F;flex-shrink:0}
+.faq[open] summary::after{content:"\2212"}
+.faq p{margin:10px 0 0 !important}
 </style>
 </head>
 <body>
 <div style="background: #F3F6FA; color: #142249; font-family: 'Poppins', 'Segoe UI', sans-serif">
 
 <header style="background: #ffffff; border-bottom: 1px solid #E1E7F0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div class="hdr" style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
 <a href="index.html" aria-label="Skalex home" style="display: flex"><img src="assets/logo.png" alt="Skalex School of Business" style="width: 130px; height: 55px; object-fit: contain"></a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
+<button type="button" class="navbtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+<nav id="mainnav" class="mainnav" aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px">
 <a href="index.html" style="color: #2E3B5E; text-decoration: none; font-weight: 500; padding: 12px 14px">Home</a>
 <a href="course.html" aria-current="page" style="color: #142249; text-decoration: none; font-weight: 700; padding: 12px 14px; border-bottom: 3px solid #FFE11A">Courses</a>
 <a href="about.html" style="color: #2E3B5E; text-decoration: none; font-weight: 500; padding: 12px 14px">About</a>
 <a href="contact.html" style="color: #2E3B5E; text-decoration: none; font-weight: 500; padding: 12px 14px">Contact</a>
-<a href="https://www.instagram.com/skalex_in/" aria-label="Skalex on Instagram" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; color: #142249"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
-<a href="https://wa.me/919400833546" style="background: #142249; color: #ffffff; text-decoration: none; font-weight: 600; padding: 12px 20px; border-radius: 10px; margin-left: 4px">WhatsApp us</a>
+<a class="nav-ig" href="https://www.instagram.com/skalex_in/" aria-label="Skalex on Instagram" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; color: #142249"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
+<a class="nav-wa" href="https://wa.me/919400833546" style="background: #142249; color: #ffffff; text-decoration: none; font-weight: 600; padding: 12px 20px; border-radius: 10px; margin-left: 4px">WhatsApp us</a>
 </nav>
 </div>
 </header>
@@ -55,7 +107,7 @@ header nav a:hover{color:#142249}
 
 <section>
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px 72px">
-<div style="background: #ffffff; border-radius: 20px; padding: 28px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 24px">
+<div class="facts" style="background: #ffffff; border-radius: 20px; padding: 28px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 4px"><div style="font-size: 13px; color: #51607A">Duration</div><div style="font-weight: 700; font-size: 1.05rem">2 months</div></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><div style="font-size: 13px; color: #51607A">Schedule</div><div style="font-weight: 700; font-size: 1.05rem">Mon–Fri, 3 hours a day</div></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><div style="font-size: 13px; color: #51607A">Mode</div><div style="font-weight: 700; font-size: 1.05rem">Offline classroom</div></div>
@@ -102,7 +154,7 @@ header nav a:hover{color:#142249}
 <section style="background: #ffffff">
 <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 28px">
 <h2 style="margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 3.5vw, 2.4rem); letter-spacing: -0.02em">Tools &amp; skills</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
+<div class="tool-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
 <div style="background: #F3F6FA; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px"><img src="assets/zoho-books.png" alt="Zoho Books logo" style="width: 100px; height: 48px; object-fit: contain; object-position: left center"><h3 style="margin: 0; font-size: 1.1rem; font-weight: 700">Zoho Books</h3><p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #3A4660">Cloud accounting software common in UAE businesses.</p></div>
 <div style="background: #F3F6FA; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px"><img src="assets/tally.png" alt="Tally logo" style="width: 96px; height: 48px; object-fit: contain; object-position: left center"><h3 style="margin: 0; font-size: 1.1rem; font-weight: 700">Tally</h3><p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #3A4660">Vouchers, ledgers, inventory and reports.</p></div>
 <div style="background: #F3F6FA; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px"><img src="assets/excel.png" alt="Microsoft Excel logo" style="width: 48px; height: 48px; object-fit: contain"><h3 style="margin: 0; font-size: 1.1rem; font-weight: 700">Excel</h3><p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #3A4660">Formulas, lookups and pivot tables you'll use every day at work.</p></div>
@@ -117,12 +169,12 @@ header nav a:hover{color:#142249}
 <div style="max-width: 860px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 24px">
 <h2 style="margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 3.5vw, 2.4rem); letter-spacing: -0.02em">Questions students ask</h2>
 <div style="display: flex; flex-direction: column; gap: 12px">
-<div style="background: #ffffff; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 1.05rem; font-weight: 700">Is this useful for UAE jobs?</h3><p style="margin: 0; line-height: 1.6; color: #3A4660">Yes. UAE Corporate Tax and VAT are the core of the course, taught alongside the accounting workflows and software used in UAE firms.</p></div>
-<div style="background: #ffffff; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 1.05rem; font-weight: 700">Who can join?</h3><p style="margin: 0; line-height: 1.6; color: #3A4660">Graduates who want an entry-level accounting or tax role in the UAE.</p></div>
-<div style="background: #ffffff; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 1.05rem; font-weight: 700">Do I need prior knowledge?</h3><p style="margin: 0; line-height: 1.6; color: #3A4660">No. The course starts with accounting fundamentals and builds up from there.</p></div>
-<div style="background: #ffffff; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 1.05rem; font-weight: 700">Do you help with jobs?</h3><p style="margin: 0; line-height: 1.6; color: #3A4660">We guide you through interview preparation and help you become job-ready.</p></div>
-<div style="background: #ffffff; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 1.05rem; font-weight: 700">Will I get a certificate?</h3><p style="margin: 0; line-height: 1.6; color: #3A4660">After you complete the course and its practical assignments, you receive an experience certificate.</p></div>
-<div style="background: #ffffff; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 6px"><h3 style="margin: 0; font-size: 1.05rem; font-weight: 700">What are the fees?</h3><p style="margin: 0; line-height: 1.6; color: #3A4660">WhatsApp us on +91 94008 33546 for fee details and the early-bird offer for students who register before 20 October.</p></div>
+<details class="faq" style="background: #ffffff; border-radius: 14px; padding: 20px 24px"><summary>Is this useful for UAE jobs?</summary><p style="margin: 0; line-height: 1.6; color: #3A4660">Yes. UAE Corporate Tax and VAT are the core of the course, taught alongside the accounting workflows and software used in UAE firms.</p></details>
+<details class="faq" style="background: #ffffff; border-radius: 14px; padding: 20px 24px"><summary>Who can join?</summary><p style="margin: 0; line-height: 1.6; color: #3A4660">Graduates who want an entry-level accounting or tax role in the UAE.</p></details>
+<details class="faq" style="background: #ffffff; border-radius: 14px; padding: 20px 24px"><summary>Do I need prior knowledge?</summary><p style="margin: 0; line-height: 1.6; color: #3A4660">No. The course starts with accounting fundamentals and builds up from there.</p></details>
+<details class="faq" style="background: #ffffff; border-radius: 14px; padding: 20px 24px"><summary>Do you help with jobs?</summary><p style="margin: 0; line-height: 1.6; color: #3A4660">We guide you through interview preparation and help you become job-ready.</p></details>
+<details class="faq" style="background: #ffffff; border-radius: 14px; padding: 20px 24px"><summary>Will I get a certificate?</summary><p style="margin: 0; line-height: 1.6; color: #3A4660">After you complete the course and its practical assignments, you receive an experience certificate.</p></details>
+<details class="faq" style="background: #ffffff; border-radius: 14px; padding: 20px 24px"><summary>What are the fees?</summary><p style="margin: 0; line-height: 1.6; color: #3A4660">WhatsApp us on +91 94008 33546 for fee details and the early-bird offer for students who register before 20 October.</p></details>
 </div>
 </div>
 </section>
@@ -149,7 +201,7 @@ header nav a:hover{color:#142249}
 </section>
 
 <footer style="background: #0E1A38; color: #DCE3F0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px">
+<div class="foot" style="max-width: 1200px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px">
 <div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800; color: #ffffff">Skalex <span style="color: #5FC4C2">School of Business</span></div><p style="margin: 0; font-size: 14px; line-height: 1.6">Upskilling graduates for global careers.</p></div>
 <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px"><div style="font-weight: 700; color: #ffffff">Visit</div><div style="line-height: 1.6">1st Floor, Tiara Complex,<br>Onden Road, Kannur 670001</div></div>
 <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px"><div style="font-weight: 700; color: #ffffff">Contact</div><a href="https://wa.me/919400833546" style="color: #DCE3F0">+91 94008 33546</a><a href="https://www.instagram.com/skalex_in/" style="color: #DCE3F0">@skalex_in on Instagram</a></div>
@@ -157,5 +209,10 @@ header nav a:hover{color:#142249}
 </div>
 </footer>
 </div>
+<a class="wa-float" href="https://wa.me/919400833546" aria-label="Chat with Skalex on WhatsApp"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"></path></svg></a>
+<script>
+(function(){var b=document.querySelector('.navbtn'),n=document.getElementById('mainnav');
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});}})();
+</script>
 </body>
 </html>
