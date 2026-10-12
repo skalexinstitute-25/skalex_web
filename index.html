@@ -69,6 +69,12 @@ header nav a:hover{color:#142249}
   .foot > div:first-child{grid-column:1 / -1}
   h1{letter-spacing:-0.02em !important}
   .btns a{flex:1 1 100%;text-align:center}
+  .feat{padding:26px 22px !important;gap:0 !important;border-radius:22px !important}
+  .feat-corner,.feat-side{display:none !important}
+  .feat h3{font-size:1.75rem !important}
+  .feat p{font-size:.98rem !important}
+  .feat-btns{flex-wrap:nowrap !important;gap:10px !important}
+  .feat-btns a{flex:1 1 0;text-align:center;padding:14px 10px !important;font-size:15px}
 }
 /* ---------- FAQ accordion ---------- */
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:700;font-size:1.05rem}
@@ -143,8 +149,8 @@ header nav a:hover{color:#142249}
 <h2 style="margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 3.5vw, 2.4rem); letter-spacing: -0.02em">Featured course</h2>
 <a href="course.html" style="color: #142249; font-weight: 700; padding: 10px 0">All courses →</a>
 </div>
-<div style="background: #142249; color: #ffffff; border-radius: 28px; padding: clamp(28px, 5vw, 56px); display: flex; flex-wrap: wrap; gap: 40px; position: relative; overflow: hidden">
-<svg aria-hidden="true" width="260" height="210" viewBox="0 0 260 210" style="position: absolute; right: 0; top: 0"><path d="M260 0H100c30 100 90 170 160 190z" fill="#279D9F" opacity="0.55"></path></svg>
+<div class="feat" style="background: #142249; color: #ffffff; border-radius: 28px; padding: clamp(28px, 5vw, 56px); display: flex; flex-wrap: wrap; gap: 40px; position: relative; overflow: hidden">
+<svg class="feat-corner" aria-hidden="true" width="260" height="210" viewBox="0 0 260 210" style="position: absolute; right: 0; top: 0"><path d="M260 0H100c30 100 90 170 160 190z" fill="#279D9F" opacity="0.55"></path></svg>
 <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px; position: relative">
 <div style="align-self: flex-start; background: #FFE11A; color: #142249; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 800; letter-spacing: 0.06em">ADMISSION OPEN · NOVEMBER 2026</div>
 <h3 style="margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.05; letter-spacing: -0.02em">UAE Tax &amp; Accounting <span style="color: #5FC4C2">Career Course</span></h3>
@@ -154,12 +160,12 @@ header nav a:hover{color:#142249}
 <div style="display: flex; flex-direction: column; gap: 2px"><div style="font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 800">3 hrs/day</div><div style="font-size: 13px; color: #B9C6DE">Monday to Friday</div></div>
 <div style="display: flex; flex-direction: column; gap: 2px"><div style="font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 800">Offline</div><div style="font-size: 13px; color: #B9C6DE">Kannur classroom</div></div>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
+<div class="feat-btns" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
 <a href="course.html" style="background: #FFE11A; color: #142249; text-decoration: none; font-weight: 800; padding: 16px 26px; border-radius: 12px">View the course</a>
 <a href="https://wa.me/919400833546" style="background: transparent; color: #ffffff; text-decoration: none; font-weight: 700; padding: 14px 24px; border-radius: 12px; border: 2px solid #ffffff">Ask about fees</a>
 </div>
 </div>
-<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px; position: relative">
+<div class="feat-side" style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px; position: relative">
 <div style="background: #ffffff; color: #142249; border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; gap: 10px">
 <div style="font-size: 12px; font-weight: 700; color: #16867F; letter-spacing: 0.12em">CORE MODULE</div>
 <div style="font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800">UAE Corporate Tax &amp; VAT</div>
